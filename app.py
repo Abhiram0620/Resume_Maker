@@ -15,13 +15,13 @@ def adding():
     agithub = request.form.get("agithub")
     github = request.form.get("github")
     summary=request.form.get("summary")
+
     if(len(alinkedin)!=0 and len(linedin)==0):
         return render_template("index.html",msg="if you enter anchor then you have to enter url")
 
     if(len(agithub)!=0 and github==0):
         return render_template("index.html",msg1="if you enter anchor then you have to enter url")
-    
-
+                                                                                                                                 
     return render_template('resume_template2.html',  fullname=name, phone_number = mobile,mail=email , alinkedin=alinkedin, linkedinurl=linedin, agithub=agithub, github=github, summary=summary  )
 
 if __name__=='__main__':
