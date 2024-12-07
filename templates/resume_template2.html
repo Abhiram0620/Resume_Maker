@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 10px;
+        }
+        body {
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #contact_information {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            list-style: none;
+            padding: 0;
+        }
+        #summary, #education, #technical_skills, #projects, #internships_and_certifications, #achievements_and_activities {
+            margin-top: 20px;
+        }
+        h2 {
+            border-bottom: 1px solid black; 
+            padding-bottom: 5px; 
+            font-size: 20px; 
+            margin-left: -3px; 
+        }
+        .each_education, .each_project, .each_certficate, .each_activity_or_achievement {
+            margin-bottom: 15px; 
+        }
+        .course_and_year, .college_and_cgpa {
+            display: flex; 
+            justify-content: space-between; 
+            margin: 5px 0; 
+        }
+        #skill {
+            margin-top: 5px; 
+            margin-bottom: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1></h1>
+        <ul id="contact_information">
+            <li></li>
+            <li><a href="mailto:" class="email"></a></li>
+            <li><a href="#" class="linkedin"></a></li>
+            <li><a href="#" class="github"></a></li>
+        </ul>
+    </header>
+
+    <section id="summary">
+        <h2>SUMMARY</h2>
+        <p></p>
+    </section>
+
+    <section id="education">
+        <h2>EDUCATION</h2>
+        <div class="each_education">
+            <div class="course_and_year">
+                <h4></h4>
+                <time></time>
+            </div>
+            <div class="college_and_cgpa">
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="technical_skills">
+        <h2>TECHNICAL SKILLS</h2>
+        <div id="skill">
+            <h4></h4>
+            <ul type="none"></ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>PROJECTS</h2>
+        <div class="each_project">
+            <h4></h4>
+            <p></p>
+        </div>
+    </section>
+
+    <section id="internships_and_certifications">
+        <h2>INTERNSHIPS AND CERTIFICATIONS</h2>
+        <div class="each_certficate">
+            <li style="list-style-type:none;"></li>
+            <li style="list-style-type:none;"></li>
+        </div>
+    </section>
+
+    <section id="achievements_and_activities" style="list-style-type:none; font-size:16px; text-align:justify;">
+        <h2>ACHIEVEMENTS AND ACTIVITIES</h2>
+        <div class="each_activity_or_achievement">
+            <li></li>
+        </div>
+    </section>
+
+</body>
+</html>
