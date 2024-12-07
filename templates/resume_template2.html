@@ -29,89 +29,217 @@
             list-style: none;
             padding: 0;
         }
-        #summary, #education, #technical_skills, #projects, #internships_and_certifications, #achievements_and_activities {
+        #contact_information li, 
+        #contact_information a {
+            color: black;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        #summary, #education {
             margin-top: 20px;
         }
         h2 {
-            border-bottom: 1px solid black; 
-            padding-bottom: 5px; 
-            font-size: 20px; 
-            margin-left: -3px; 
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+            font-size: 20px;
+            margin-left: -3px;
+            /* border: 1px solid black;
+            text-align: center  ;
+            background-color: rgb(225, 206, 177);
+            border-radius: 5px; */
         }
-        .each_education, .each_project, .each_certficate, .each_activity_or_achievement {
-            margin-bottom: 15px; 
+        #summary p {
+            text-align: justify;
+            font-size: 15px;
+        }
+        .each_education {
+            margin-bottom: 15px;
         }
         .course_and_year, .college_and_cgpa {
-            display: flex; 
-            justify-content: space-between; 
-            margin: 5px 0; 
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
         }
-        #skill {
-            margin-top: 5px; 
-            margin-bottom: 5px; 
+        #skill, #skill ul{
+            display: flex;
+
         }
+        #skill{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        #skill ul{
+            position: absolute;
+            margin-left: 250px;
+            gap: 3px;
+            text-align: left;
+        }
+        #skill ul ::after{
+            content: ", ";
+        }
+        .each_project{
+            margin-top: 7px;
+            margin-bottom: 8px;
+        }
+        .each_project p{
+            text-align: justify;
+        }
+        .each_certficate{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .each_actvity_or_acivement{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+
     </style>
 </head>
 <body>
     <header>
-        <h1></h1>
+        {% if fullname %}
+        <h1>{{fullname}}</h1>
+        {% endif %}
         <ul id="contact_information">
-            <li></li>
-            <li><a href="mailto:" class="email"></a></li>
-            <li><a href="#" class="linkedin"></a></li>
-            <li><a href="#" class="github"></a></li>
+            {% if phone_number %}
+            <li>{{phone_number}}</li>
+            {% endif %}
+            {% if mail %}
+            <li><a href="mailto:{{mail}}">{{mail}}</a></li>
+            {% endif %}
+            {% if alinkedin %}
+            <li><a href={{linkedinurl}}>{{alinkedin}}</a></li>
+            {% endif %}
+            {% if alinkedin %}
+            <li><a href={{github}} >{{agithub}}</a></li>
+            {% endif %}
+           
         </ul>
     </header>
-
     <section id="summary">
         <h2>SUMMARY</h2>
-        <p></p>
+        {% if summary %}
+        <p>{{summary}}</p>
+        {% endif %}
     </section>
-
     <section id="education">
         <h2>EDUCATION</h2>
         <div class="each_education">
             <div class="course_and_year">
-                <h4></h4>
-                <time></time>
+                <h4>Bachelor of Technology in Artificial Intelligence</h4>
+                <time>2022 - 2025</time>
             </div>
             <div class="college_and_cgpa">
-                <p></p>
-                <p></p>
+                <p>QIS College of Engineering and Technology, Ongole</p>
+                <p>CGPA: 8.71/10</p>
+            </div>
+        </div>
+        <div class="each_education">
+            <div class="course_and_year">
+                <h4>Diploma in Civil Engineering</h4>
+                <time>2019 - 2022</time>
+            </div>
+            <div class="college_and_cgpa">
+                <p>Government Polytechnic Vijayawada</p>
+                <p>Percentage: 78.57%</p>
+            </div>
+        </div>
+        <div class="each_education">
+            <div class="course_and_year">
+                <h4>Class X, SSC</h4>
+                <time>2017 - 2018</time>
+            </div>
+            <div class="college_and_cgpa">
+                <p>ZP High School, Koduru</p>
+                <p>GPA: 9.0/10</p>
             </div>
         </div>
     </section>
-
     <section id="technical_skills">
         <h2>TECHNICAL SKILLS</h2>
         <div id="skill">
-            <h4></h4>
-            <ul type="none"></ul>
+           <h4>Programming</h4>
+            <ul type="none">
+                <li>Java </li>
+                <li> Python </li>
+                <li>SQL </li>
+                <li>JavaScript</li>
+            </ul>
         </div>
+        <div id="skill">
+            <h4>Web Development</h4>
+             <ul type="none">
+                 <li>HTML</li>
+                 <li> CSS</li>
+                 <li>JavaScript </li>
+                 <li>Git</li>
+                 <li>Github</li>
+             </ul>
+         </div>
+         <div id="skill">
+            <h4>Soft Skills</h4>
+             <ul type="none">
+                 <li>Problem sloving </li>
+                 <li> Collaboration</li>
+                 <li>Creativity </li>
+                 <li>Critical Thinking</li>
+             </ul>
+         </div>
+         <div id="skill">
+            <h4>Hobbies</h4>
+             <ul type="none">
+                 <li>Competitive coding (LeetCode) </li>
+                 <li> Typing, Watching stand-up comedy </li>
+             </ul>
+         </div>
+        
     </section>
-
-    <section id="projects">
+    <section>
         <h2>PROJECTS</h2>
         <div class="each_project">
-            <h4></h4>
-            <p></p>
+            <h4>Orphan Donation Landing Page (HTML, CSS)</h4>
+            <p>- Designed a user-friendly orphan donation landing page using HTML and CSS with links to trusted donation sites. Implemented a responsive design to ensure accessibility across all devices and screen sizes.</p>
+        </div>
+        <div class="each_project">
+            <h4>Quiz Website (HTML, CSS, JavaScript)</h4>
+            <p>- Developed a quiz web app with interactive features like multiple-choice questions, score tracking, and dynamic question rendering. Added a timer to enhance user engagement and challenge.  </p>
+        </div>
+        <div class="each_project">
+            <h4>To-Do List Application (HTML, CSS, JavaScript)</h4>
+            <p>- Developed a simple and interactive To-Do List application using HTML, CSS, and JavaScript. It allows users to add, edit, and delete tasks, with dynamic updates. I also implemented a task completion feature with visual indicators, enhancing the user experience and usability.</p>
         </div>
     </section>
-
-    <section id="internships_and_certifications">
+    <section>
         <h2>INTERNSHIPS AND CERTIFICATIONS</h2>
         <div class="each_certficate">
-            <li style="list-style-type:none;"></li>
-            <li style="list-style-type:none;"></li>
+            <li style="list-style-type: none;">- Oasis Web Development Virtual Internship</li>
+            <li style="list-style-type: none;">Apr 2024 - Jun 2024</li>
+        </div><div class="each_certficate">
+            <li style="list-style-type: none;">- Java Programming Course, Great Learning</li>
+            <li style="list-style-type: none;">Sep 2024</li>
+        </div><div class="each_certficate">
+            <li style="list-style-type: none;">- Python Basic and Intermediate Course Completion Certificate</li>
+            <li style="list-style-type: none;">Sep 2023 - Nov 2023</li>
         </div>
+        
     </section>
-
-    <section id="achievements_and_activities" style="list-style-type:none; font-size:16px; text-align:justify;">
+    <section  style="list-style-type: none; font-size: 16px; text-align: justify;">
         <h2>ACHIEVEMENTS AND ACTIVITIES</h2>
-        <div class="each_activity_or_achievement">
-            <li></li>
+        <div class="each_actvity_or_acivement">
+            <li>- Solved 350+ LeetCode problems showcasing my dedication and problem-solving skills.</li>
         </div>
+        <div class="each_actvity_or_acivement">
+            <li>- Earned a 5-star rating in Python on HackerRank, demonstrating advanced coding skills and expertise.</li>
+        </div>
+        <div class="each_actvity_or_acivement">
+            <li>- Currently developing a worker eligibility project for mining to enhance safety and reduce risks.</li>
+        </div>
+        <div class="each_actvity_or_acivement">
+            <li>- I am working on HTML and CSS projects to improve my user experience and create responsive web pages.</li>
+        </div>
+        
     </section>
-
 </body>
 </html>
