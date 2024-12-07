@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+        body {
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid black;
+            padding: 20px;
+            margin-top: 50px;
+
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #contact_information {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            list-style: none;
+            padding: 0;
+        }
+        #contact_information li, 
+        #contact_information a {
+            color: black;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        #summary, #education {
+            margin-top: 20px;
+        }
+        h2 {
+            /* border-bottom: 1px solid black;
+            padding-bottom: 5px;
+            font-size: 20px;
+            margin-left: -3px; */
+            border: 1px solid black;
+            text-align: center  ;
+            background-color: rgb(225, 206, 177);
+            border-radius: 5px;
+            margin-bottom: 5px;
+
+        }
+        #summary p {
+            text-align: justify;
+            font-size: 15px;
+        }
+        .each_education {
+            margin-bottom: 15px;
+        }
+        .course_and_year, .college_and_cgpa {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+        #technical_skills .skill_section {
+            margin: 10px 0;
+        }
+        #technical_skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+        #technical_skills ul li {
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .each_project{
+            margin-top: 7px;
+            margin-bottom: 8px;
+        }
+        .each_project p{
+            text-align: justify;
+        }
+        .each_certficate{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .each_actvity_or_acivement{
+            margin-bottom: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tallapureddy Abhi Ram Reddy</h1>
+        <ul id="contact_information">
+            <li>+91 96520 48406</li>
+            <li><a href="mailto:tsrreddy815@gmail.com">tsrreddy815@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
+            <li><a href="https://www.github.com/Abhiram0620">GitHub</a></li>
+        </ul>
+    </header>
+    <section id="summary">
+        <h2>SUMMARY</h2>
+        <p>Motivated software developer with strong skills in Java, Python, and web development (HTML, CSS, JavaScript). Experienced in building scalable applications and solving complex problems. Passionate about learning new technologies, improving user experiences, and contributing to impactful projects. Continuously working on enhancing my problem-solving skills through competitive coding and real-world projects.</p>
+    </section>
+    <section id="education">
+        <h2>EDUCATION</h2>
+        <div class="each_education">
+            <div class="course_and_year">
+                <h4>Bachelor of Technology in Artificial Intelligence</h4>
+                <time>2022 - 2025</time>
+            </div>
+            <div class="college_and_cgpa">
+                <p>QIS College of Engineering and Technology, Ongole</p>
+                <p>CGPA: 8.71/10</p>
+            </div>
+        </div>
+        <div class="each_education">
+            <div class="course_and_year">
+                <h4>Diploma in Civil Engineering</h4>
+                <time>2019 - 2022</time>
+            </div>
+            <div class="college_and_cgpa">
+                <p>Government Polytechnic Vijayawada</p>
+                <p>Percentage: 78.57%</p>
+            </div>
+        </div>
+        <div class="each_education">
+            <div class="course_and_year">
+                <h4>Class X, SSC</h4>
+                <time>2017 - 2018</time>
+            </div>
+            <div class="college_and_cgpa">
+                <p>ZP High School, Koduru</p>
+                <p>GPA: 9.0/10</p>
+            </div>
+        </div>
+    </section>
+    <section id="technical_skills">
+        <h2>TECHNICAL SKILLS</h2>
+        <div id="skill">
+           <h4>Programming</h4>
+            <ul type="none">
+                <li>Java </li>
+                <li> Python </li>
+                <li>SQL </li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div id="skill">
+            <h4>Web Development</h4>
+             <ul type="none">
+                 <li>HTML</li>
+                 <li> CSS</li>
+                 <li>JavaScript </li>
+                 <li>Git</li>
+                 <li>Github</li>
+             </ul>
+         </div>
+         <div id="skill">
+            <h4>Soft Skills</h4>
+             <ul type="none">
+                 <li>Problem sloving </li>
+                 <li> Collaboration</li>
+                 <li>Creativity </li>
+                 <li>Critical Thinking</li>
+             </ul>
+         </div>
+         <div id="skill">
+            <h4>Hobbies</h4>
+             <ul type="none">
+                 <li>Competitive coding (LeetCode) </li>
+                 <li> Typing, Watching stand-up comedy </li>
+             </ul>
+         </div>
+        
+    </section>
+    <section>
+        <h2>PROJECTS</h2>
+        <div class="each_project">
+            <h4>Orphan Donation Landing Page (HTML, CSS)</h4>
+            <p>- Designed a user-friendly orphan donation landing page using HTML and CSS with links to trusted donation sites. Implemented a responsive design to ensure accessibility across all devices and screen sizes.</p>
+        </div>
+        <div class="each_project">
+            <h4>Quiz Website (HTML, CSS, JavaScript)</h4>
+            <p>- Developed a quiz web app with interactive features like multiple-choice questions, score tracking, and dynamic question rendering. Added a timer to enhance user engagement and challenge.  </p>
+        </div>
+        <div class="each_project">
+            <h4>To-Do List Application (HTML, CSS, JavaScript)</h4>
+            <p>- Developed a simple and interactive To-Do List application using HTML, CSS, and JavaScript. It allows users to add, edit, and delete tasks, with dynamic updates. I also implemented a task completion feature with visual indicators, enhancing the user experience and usability.</p>
+        </div>
+    </section>
+    <section>
+        <h2>INTERNSHIPS AND CERTIFICATIONS</h2>
+        <div class="each_certficate">
+            <li style="list-style-type: none;">- Oasis Web Development Virtual Internship</li>
+            <li style="list-style-type: none;">Apr 2024 - Jun 2024</li>
+        </div><div class="each_certficate">
+            <li style="list-style-type: none;">- Java Programming Course, Great Learning</li>
+            <li style="list-style-type: none;">Sep 2024</li>
+        </div><div class="each_certficate">
+            <li style="list-style-type: none;">- Python Basic and Intermediate Course Completion Certificate</li>
+            <li style="list-style-type: none;">Sep 2023 - Nov 2023</li>
+        </div>
+        
+    </section>
+    <section  style="list-style-type: none; font-size: 16px; text-align: justify;">
+        <h2>ACHIEVEMENTS AND ACTIVITIES</h2>
+        <div class="each_actvity_or_acivement">
+            <li>- Solved 350+ LeetCode problems showcasing my dedication and problem-solving skills.</li>
+        </div>
+        <div class="each_actvity_or_acivement">
+            <li>- Earned a 5-star rating in Python on HackerRank, demonstrating advanced coding skills and expertise.</li>
+        </div>
+        <div class="each_actvity_or_acivement">
+            <li>- Currently developing a worker eligibility project for mining to enhance safety and reduce risks.</li>
+        </div>
+        <div class="each_actvity_or_acivement">
+            <li>- I am working on HTML and CSS projects to improve my user experience and create responsive web pages.</li>
+        </div>
+        
+    </section>
+</body>
+</html>
