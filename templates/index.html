@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Maker</title>
-    <link rel="stylesheet" href="..\static/style.css">
+    <link rel="stylesheet" href="/static/style.css">
     <style>
         * {
             padding: 0px;
@@ -17,12 +17,20 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            margin-top: 150px;
         }
 
         #personal_information {
             justify-content: center;
             align-items: center;
             margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         #section1 {
@@ -36,7 +44,8 @@
             margin-top: 50px;
         }
 
-        #full_name input {
+        #full_name input,
+        #education_details input {
             margin-bottom: 10px;
             padding: 10px;
             width: 80%;
@@ -63,7 +72,7 @@
             <div id="full_name">
                 <input type="text" name="first_name" id="first_name" placeholder="Enter First name" required>
                 <input type="text" name="last_name" id="last_name" placeholder="Enter Last name" required>
-                <input type="tel" name="mobile_number" id="mobile_number" required maxlength="10" minlength="10" placeholder="Enter your phone number">
+                <input type="tel" name="mobile_number" id="mobile_number" required maxlength="10" minlength="10" pattern="\d{10}" placeholder="Enter your phone number">
                 <input type="email" name="email" id="email" placeholder="Enter your email" required>
                 <input type="text" name="alinkedin" id="alinkedin" maxlength="10" minlength="5" placeholder="Enter name for LinkedIn">
                 <input type="url" name="linkdin" id="linkdin" placeholder="Enter LinkedIn URL">
@@ -75,15 +84,63 @@
                 <input type="text" name="agithub" id="agithub" maxlength="10" minlength="5" placeholder="Enter name for GitHub">
                 <input type="url" name="github" id="github" placeholder="Enter GitHub URL">
                 
-                
                 {% if msg1 %}
                     <p style="color: red;">{{ msg1 }}</p>
                 {% endif %}
                 
                 <textarea name="summary" id="summary" placeholder="Enter some summary about yourself" style="width: 86%; height: 100px;"></textarea>
+                <h2>Education details</h2>
+                <div id="education_details">
+                    <div id="education_details1">
+                        <h3>education 1</h3>
+                        <input type="text" name="course" id="course" placeholder="Enter your course and branch" required>
+                        <input type="text" name="college" id="college" placeholder="Enter your college name" required>
+                        <input type="text" name="cgpa" id="cgpa" placeholder="Enter your CGPA" required>
+                        <input type="text" name="duration" id="duration" placeholder="Enter your start and ending date" required>
+                    </div>
+                    <div id="education_details2">
+                    </div>
+                    <input type="button" name="add_one_more_education" id="add_one_more_education" value="Add one more" onclick="addonemore()">
+                </div>
                 <input type="submit" value="Next" id="submit1">
             </div>
         </form>
     </section>
+
+    <script>
+        let z=2;
+        function addonemore() {
+            let a = document.getElementById("education_details2");
+            let header = document.createElement('h3');
+            header.innerHTML="education "+z++;
+
+            let course = document.createElement('input');
+            course.type = 'text';
+            course.name = 'course';
+            course.placeholder = 'Enter your course and branch';
+
+            let college = document.createElement('input');
+            college.type = 'text';
+            college.name = 'college';
+            college.placeholder = 'Enter your college name';
+
+            let cgpa = document.createElement('input');
+            cgpa.type = 'text';
+            cgpa.name = 'cgpa';
+            cgpa.placeholder = 'Enter your CGPA';
+
+            let duration = document.createElement('input');
+            duration.type = 'text';
+            duration.name = 'duration';
+            duration.placeholder = 'Enter your start and ending date';
+
+            // Append the new inputs to the div
+            a.append(header)
+            a.append(course);
+            a.append(college);
+            a.append(cgpa);
+            a.append(duration);
+        }
+    </script>
 </body>
 </html>
