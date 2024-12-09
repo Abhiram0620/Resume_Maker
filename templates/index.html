@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +56,6 @@
         }
     </style>
 </head>
-
 <body>
     <section id="section1">
         <h1>Personal Information</h1>
@@ -65,25 +63,27 @@
             <div id="full_name">
                 <input type="text" name="first_name" id="first_name" placeholder="Enter First name" required>
                 <input type="text" name="last_name" id="last_name" placeholder="Enter Last name" required>
-                <input type="tel" name="mobile_number" id="mobile_number" required maxlength="10" minlength="10" placeholder="Enter your phone phone_number">  
-                <input type="email" name="email" id="email" placeholder="Enter your email" required>      
-                <input type="text" name="alinkedin" id="alinkedin" maxlength="10" minlength="5" placeholder="Enter name for linkedin"> 
-                <input type="url" name="linkdin" id="linkdin" placeholder="Enter linkedin url">      
-                {% if msg %}
-                <p style="color: red;">{{msg}}</p>
-                {% endif %}
-                <input type="text" name="agithub" id="agithub" maxlength="10" minlength="5" placeholder="Enter name for github"> 
-                <input type="url" name="github" id="github" placeholder="Enter github url">
-                {% if msg1 %}
-                <p style="color: red;">{{msg1}}</p>
-                {% endif %}
-                <textarea name="summary" id="summary" placeholder="Enter some summary about your self"></textarea>
-                <input type="submit" value="Next" id="submit1" placeholder="Enter linkedin url">
+                <input type="tel" name="mobile_number" id="mobile_number" required maxlength="10" minlength="10" placeholder="Enter your phone number">
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                <input type="text" name="alinkedin" id="alinkedin" maxlength="10" minlength="5" placeholder="Enter name for LinkedIn">
+                <input type="url" name="linkdin" id="linkdin" placeholder="Enter LinkedIn URL">
                 
-
+                {% if msg %}
+                    <p style="color: red;">{{ msg }}</p>
+                {% endif %}
+                
+                <input type="text" name="agithub" id="agithub" maxlength="10" minlength="5" placeholder="Enter name for GitHub">
+                <input type="url" name="github" id="github" placeholder="Enter GitHub URL">
+                
+                
+                {% if msg1 %}
+                    <p style="color: red;">{{ msg1 }}</p>
+                {% endif %}
+                
+                <textarea name="summary" id="summary" placeholder="Enter some summary about yourself" style="width: 86%; height: 100px;"></textarea>
+                <input type="submit" value="Next" id="submit1">
             </div>
         </form>
     </section>
 </body>
-
 </html>

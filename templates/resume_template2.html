@@ -15,7 +15,7 @@
         body {
             max-width: 800px;
             margin: auto;
-            border: 1px solid black;
+            /* border: 1px solid black; */
             padding: 20px;
         }
         header {
@@ -110,10 +110,10 @@
             <li><a href="mailto:{{mail}}">{{mail}}</a></li>
             {% endif %}
             {% if alinkedin %}
-            <li><a href={{linkedinurl}}>{{alinkedin}}</a></li>
+            <li><a href={{linkedinurl}} target="_blank">{{alinkedin}}</a></li>
             {% endif %}
             {% if alinkedin %}
-            <li><a href={{github}} >{{agithub}}</a></li>
+            <li><a href={{github}} target="_blank">{{agithub}}</a></li>
             {% endif %}
            
         </ul>
